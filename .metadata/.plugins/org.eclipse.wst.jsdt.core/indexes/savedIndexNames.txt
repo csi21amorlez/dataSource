@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+C:\Users\CSI21-Amorlez\Documents\Spring_Vistas_JSP\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

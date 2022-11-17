@@ -1,0 +1,35 @@
+package Implementaciones;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class AlumnoImpl  implements Servicios.AlumnoInt{
+
+	public ResultSet selectEverything(Connection conn) {		
+		// Declaramos la consulta sql
+				System.out.println("[INFO] Entrando en modelos.consultas.selectAll");
+				String sql = "SELECT * FROM \"dlk_operacional_productos\".\"opr_cat_productos\"";
+				try {
+					
+					Statement st = conn.createStatement();
+					ResultSet rs = st.executeQuery(sql);
+					return rs;
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					System.out.println("[INFO] -- modelos.consultas.selectAll -- " + e.toString());
+				}	
+			System.out.println("[INFO] -- Saliendo de modelos.consultas.selectAll");
+				
+				return null;
+			}
+		
+	}
+
+	public void insertAlumno(String nombre, String direccion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

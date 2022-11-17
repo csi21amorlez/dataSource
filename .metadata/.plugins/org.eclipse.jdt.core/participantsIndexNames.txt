@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\CSI21-Amorlez\Documents\Spring_Vistas_JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2401483375.index
+\Acceso_Datos_Spring_Postgre\src\main\resources
+C:\Users\CSI21-Amorlez\Documents\Spring_Vistas_JSP\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2748278226.index
+\Data_Access_Spring\src\main\java

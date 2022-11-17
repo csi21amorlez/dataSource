@@ -1,0 +1,28 @@
+package Servicios;
+import java.sql.*;
+
+import org.springframework.stereotype.Service;
+
+
+public interface AlumnoInt {
+	
+	public static ResultSet selectEverything() {
+		// Declaramos la consulta sql
+				System.out.println("[INFO] Entrando en modelos.consultas.selectAll");
+				String sql = "SELECT * FROM \"alumnos\".\"alumnos\"";
+				try {
+					
+					Statement st = conn.createStatement();
+					ResultSet rs = st.executeQuery(sql);
+					return rs;
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					System.out.println("[INFO] -- modelos.consultas.selectAll -- " + e.toString());
+				}	
+			System.out.println("[INFO] -- Saliendo de modelos.consultas.selectAll");
+				
+				return null;
+			}
+	}
+
+}
