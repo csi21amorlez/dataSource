@@ -18,11 +18,11 @@ public class App {
 		DataSource ds = context.getBean(DataSource.class);
 		AlumnoImpl alumno = new AlumnoImpl();
 		
-		alumno.insertAlumno("Juan","Antonio Rodriguez Zepellin 5,2,1" , ds);
+		alumno.insertAlumno("Juan","Antonio Rodriguez Zepellin" , ds);
 		ArrayList<AlumnoDAO> listAlumno = alumno.selectEverything(ds);
 		
 		for(AlumnoDAO a : listAlumno)
-			System.out.println(String.format("Id_alumno = %d nombre = %s direccion = %s ", a.getId(), a.getNombre(), a.getDireccion()));
+			System.out.println(String.format("", a.getId(), a.getNombre(), a.getDireccion()) ));
 		
 		
 		
