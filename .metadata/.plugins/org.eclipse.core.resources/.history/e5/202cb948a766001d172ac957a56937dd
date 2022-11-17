@@ -1,0 +1,38 @@
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import DAO.Implementaciones.AlumnoImpl;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+		DataSource ds = context.getBean(DataSource.class);
+		AlumnoImpl a = null;
+		
+		try {
+			a.insertAlumno("Josue", "Tomasio32", ds.getConnection());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println(["fallo 1"]);
+		}
+		
+		try {
+			a.selectEverything(ds.getConnection());
+			
+		} catch (Exception e) {
+			System.out.println(["fallo 2"]);
+		}
+		
+		
+		
+
+	}
+
+}

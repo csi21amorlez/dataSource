@@ -1,0 +1,14 @@
+import org.springframework.context.annotation.Configuration;
+
+
+public class DataSource {
+	
+	@Configuration
+	public DataSource getDataSource() {
+		DataSource ds = null;
+		
+		DataSource builder =  DataSourceBuilder.create();
+		
+	}
+
+}
