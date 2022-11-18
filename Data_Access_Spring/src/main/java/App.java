@@ -13,7 +13,7 @@ public class App {
 	public static void main(String[] args) {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");		
-		AlumnoImpl ac = (AlumnoImpl)context.getBean(AlumnoImpl.class);
+		AlumnoImpl ac = (AlumnoImpl)context.getBean("implAlumno");
 
 		ac.insertAlumno("Diego", "No es mi direccion 5,2,1");
 		ArrayList<AlumnoDAO> listAlumno = ac.selectEverything();

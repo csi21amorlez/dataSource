@@ -22,6 +22,14 @@ import DAO.Entidades.AlumnoDAO;
 public class AlumnoImpl implements DAO.Servicios.AlumnoService {
 
 	private DataSource ds;
+	public DataSource getDs() {
+		return ds;
+	}
+
+	public void setDs(DataSource ds) {
+		this.ds = ds;
+	}
+
 	@Autowired
 	public ArrayList<AlumnoDAO> selectEverything() {
 		// Declaramos la consulta sql
@@ -36,14 +44,17 @@ public class AlumnoImpl implements DAO.Servicios.AlumnoService {
 			ResultSet rs = st.executeQuery(sql);
 
 			if (!rs.next()) {
-				System.out.println("Ta vacio sosio");
+				System.out.println("[INFO] -- mimplementaciones.AlumnoImpl.selectEverything -- La tabla alumnos esta vacia");
 				return null;
 			}
 
 			while (rs.next()) {
-
-				listAlumnos
-						.add(new AlumnoDAO(rs.getInt("id_Alumno"), rs.getString("nombre"), rs.getString("direccion")));
+				
+				AlumnoDAO a = new AlumnoDAO();
+				a.setId(rs.getInt("id_alumno"));
+				a.setNombre(rs.getString("nombre"));
+				a.setDireccion(rs.getString("direccion"));
+				listAlumnos.add(a);
 
 			}
 			System.out.println("[INFO] -- Saliendo de implementaciones.AlumnoImpl.selectEverything");

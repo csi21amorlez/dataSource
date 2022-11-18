@@ -23,8 +23,8 @@
 		<property name="password" value="root123"></property>
 	</bean>
 
-	 <context:annotation-config></context:annotation-config>    
-    <context:component-scan base-package="com.FSpring.Data_Access_Spring"></context:component-scan>
-
+	 <bean id="implAlumno" class="DAO.Implementaciones.AlumnoImpl">
+	 	<property name="ds" ref="dataSource"></property>
+	 </bean>
 
 </beans>

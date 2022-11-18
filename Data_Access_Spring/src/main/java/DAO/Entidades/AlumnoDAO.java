@@ -33,13 +33,6 @@ public class AlumnoDAO {
 	}
 
 //	Constructores
-	public AlumnoDAO(int id, String nombre, String direccion) {
-		
-		this.id = id;
-		this.nombre = nombre;
-		this.direccion = direccion;
-	}
-
 	public AlumnoDAO() {
 		
 	}
