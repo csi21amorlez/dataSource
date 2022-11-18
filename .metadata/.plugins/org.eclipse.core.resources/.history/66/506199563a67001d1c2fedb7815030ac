@@ -1,0 +1,17 @@
+package Controllers;
+
+import org.springframework.stereotype.Service;
+
+import DAO.Implementaciones.AlumnoImpl;
+
+@Service
+public class AlumnoController {
+	
+	AlumnoImpl alumno;
+	
+	public void setAlumno(AlumnoImpl aluImpl) {
+		this.alumno = aluImpl;
+	}
+	
+
+}

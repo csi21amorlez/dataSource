@@ -1,0 +1,32 @@
+package Controllers;
+
+import java.util.ArrayList;
+
+import javax.sql.DataSource;
+import DAO.Entidades.*;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import DAO.Implementaciones.AlumnoImpl;
+
+@Service
+public class AlumnoController {
+	
+	@Autowired	
+	AlumnoImpl alumno;
+	
+	public void setAlumno(AlumnoImpl aluImpl) {
+		this.alumno = aluImpl;
+	}
+	
+	public ArrayList<AlumnoDAO> getSelectEverything(DataSource ds) {
+		return alumno.selectEverything(ds);
+	}
+	
+	public void getInsertAlumno(String nombre, String direccion,DataSource ds) {
+		alumno.insertAlumno(nombre, direccion, ds);
+	}
+	
+
+}

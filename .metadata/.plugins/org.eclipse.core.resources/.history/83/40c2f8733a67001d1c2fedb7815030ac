@@ -1,0 +1,24 @@
+package Controllers;
+
+import javax.sql.DataSource;
+import DAO.Entidades.*;
+
+import org.springframework.stereotype.Service;
+
+import DAO.Implementaciones.AlumnoImpl;
+
+@Service
+public class AlumnoController {
+	
+	AlumnoImpl alumno;
+	
+	public void setAlumno(AlumnoImpl aluImpl) {
+		this.alumno = aluImpl;
+	}
+	
+	public ArrayList<> getSelectEverything(DataSource ds) {
+		alumno.selectEverything(ds);
+	}
+	
+
+}

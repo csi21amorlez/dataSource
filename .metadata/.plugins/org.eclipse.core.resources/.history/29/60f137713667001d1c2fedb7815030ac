@@ -1,0 +1,5 @@
+package DAO.Implementaciones;
+
+public class Metodos extends AlumnoImpl{
+
+}

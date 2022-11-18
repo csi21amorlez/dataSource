@@ -1,0 +1,10 @@
+package DAO.Implementaciones;
+
+public class Metodos extends AlumnoImpl{
+	
+	public void getInsertAlumno() {
+		this.insertAlumno(null, null, null);
+	}
+	
+
+}

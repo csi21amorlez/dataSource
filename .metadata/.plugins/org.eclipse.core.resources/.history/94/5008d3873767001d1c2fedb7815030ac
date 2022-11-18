@@ -1,0 +1,20 @@
+package DAO.Implementaciones;
+
+public class Metodos{
+	
+	AlumnoImpl alumno;
+	
+	public void setAlumnoImpl(AlumnoImpl alumno) {
+		this.alumno = alumno;
+	}
+	 
+	public void getInsertarAlumno() {
+		alumno.insertAlumno(null, null, null);
+	}
+	
+	public void getSelectEveything() {
+		alumno.selectEverything(null);
+	}
+	
+
+}

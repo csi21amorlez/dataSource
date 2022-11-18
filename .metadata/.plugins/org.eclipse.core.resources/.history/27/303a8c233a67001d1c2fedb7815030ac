@@ -1,0 +1,6 @@
+package Controllers;
+
+@Service
+public class AlumnoController {
+
+}

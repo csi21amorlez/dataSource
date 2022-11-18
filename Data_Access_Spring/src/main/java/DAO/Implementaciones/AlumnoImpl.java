@@ -10,15 +10,20 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import DAO.Entidades.AlumnoDAO;
 
-@Service
+
+
+@Component
 public class AlumnoImpl implements DAO.Servicios.AlumnoService {
 
+	private DataSource ds;
 	@Autowired
-	public ArrayList<AlumnoDAO> selectEverything(DataSource ds) {
+	public ArrayList<AlumnoDAO> selectEverything() {
 		// Declaramos la consulta sql
 
 		System.out.println("[INFO] Entrando en implementaciones.AlumnoImpl.selectEverything");
@@ -54,7 +59,7 @@ public class AlumnoImpl implements DAO.Servicios.AlumnoService {
 	}
 
 	@Autowired
-	public void insertAlumno(String nombre, String direccion, DataSource ds) {
+	public void insertAlumno(String nombre, String direccion) {
 
 		System.out.println("[INFO] -- Entrando en consultas.AlumnoImpl.insertAlumno");
 		try {
