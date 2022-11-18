@@ -1,6 +1,5 @@
 package DAO.Entidades;
 
-
 public class AlumnoDAO {
 
 	// Atributos
@@ -35,14 +34,14 @@ public class AlumnoDAO {
 
 //	Constructores
 	public AlumnoDAO(int id, String nombre, String direccion) {
-		super();
+		
 		this.id = id;
 		this.nombre = nombre;
 		this.direccion = direccion;
 	}
 
 	public AlumnoDAO() {
-		super();
+		
 	}
 
 }

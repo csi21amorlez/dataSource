@@ -18,32 +18,32 @@ import DAO.Entidades.AlumnoDAO;
 public class AlumnoImpl implements DAO.Servicios.AlumnoService {
 
 	@Autowired
-	public  ArrayList<AlumnoDAO> selectEverything(DataSource ds) {
+	public ArrayList<AlumnoDAO> selectEverything(DataSource ds) {
 		// Declaramos la consulta sql
-		
-		
+
 		System.out.println("[INFO] Entrando en implementaciones.AlumnoImpl.selectEverything");
 		String sql = "SELECT * FROM \"alumnos\".\"alumnos\"";
 		ArrayList<AlumnoDAO> listAlumnos = new ArrayList<AlumnoDAO>();
 		try {
-			
+
 			Connection conn = ds.getConnection();
 			Statement st = conn.createStatement();
 			ResultSet rs = st.executeQuery(sql);
-			
-			if(!rs.next()) {
+
+			if (!rs.next()) {
 				System.out.println("Ta vacio sosio");
-				return null;				
+				return null;
 			}
-				
-			while (rs.next()) {			
-				
-				listAlumnos.add(new AlumnoDAO(rs.getInt("id_Alumno"), rs.getString("nombre"), rs.getString("direccion")));			
+
+			while (rs.next()) {
+
+				listAlumnos
+						.add(new AlumnoDAO(rs.getInt("id_Alumno"), rs.getString("nombre"), rs.getString("direccion")));
 
 			}
 			System.out.println("[INFO] -- Saliendo de implementaciones.AlumnoImpl.selectEverything");
+
 			return listAlumnos;
-			
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -62,7 +62,8 @@ public class AlumnoImpl implements DAO.Servicios.AlumnoService {
 			// Realizamos el insert
 			Statement st = conn.createStatement();
 
-			String sql ="INSERT INTO \"alumnos\".\"alumnos\" VALUES(DEFAULT,\'" + nombre + "\', \' " + direccion + "\');";
+			String sql = "INSERT INTO \"alumnos\".\"alumnos\" VALUES(DEFAULT,\'" + nombre + "\', \' " + direccion
+					+ "\');";
 			System.out.println(sql);
 			st.executeUpdate(sql);
 			// Cerramos la conexión

@@ -1,4 +1,5 @@
 package DAO.Servicios;
+
 import DAO.Entidades.*;
 import java.util.*;
 
@@ -7,8 +8,6 @@ import javax.sql.DataSource;
 import java.sql.*;
 
 import org.springframework.context.ApplicationContext;
-
-
 
 public interface AlumnoService {
 
